@@ -3,13 +3,11 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/estudiantedb
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/estudiantedb
     username: root
     password: 442242
-
   jpa:
-    show-sql: true
+    defer-datasource-initialization: true
     hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+      ddl-auto: create-drop
